@@ -1,10 +1,12 @@
 #! /usr/bin/env python
 
+import datetime
+import distutils.spawn
 import math
+import os
 import subprocess
 import sys
 import time
-import datetime
 
 HELP = """
 Invalid number of arguments ...
@@ -43,6 +45,11 @@ def main(args):
 
     title = args[0]
     command = args[1:]
+
+    # Hack around the fact that call does not know how to handle relative
+    # executables...
+    executable = os.path.abspath(distutils.spawn.find_executable(command[0]))
+    command[0] = executable
 
     start = time.time()
     status_line(title, 'Started', 0, 0)
