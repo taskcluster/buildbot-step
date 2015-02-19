@@ -48,6 +48,7 @@ def main(args):
     status_line(title, 'Started', 0, 0)
     exit_code = subprocess.call(command)
     status_line(title, 'Finished', exit_code, time.time() - start)
+    sys.exit(exit_code)
 
 
 main(sys.argv[1:])
