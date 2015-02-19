@@ -10,6 +10,9 @@ utility.
 If your test framework/harness has the ability to generate the
 appropriate treehreder api calls you should do this instead!
 
+Note that there are two executables `buildbot_step` and `buildbot_step.py` in the
+near future the python version will replace the bash one.
+
 ## Usage
 
 ```sh
