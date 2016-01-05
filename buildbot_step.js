@@ -40,7 +40,7 @@ function status(type, step, code, duration) {
   var dateFormat = format(
     '%s-%s-%s %s:%s:%s.%s',
     date.getUTCFullYear(),
-    padZero(date.getMonth()),
+    padZero(date.getMonth()+1),
     padZero(date.getDate()),
     padZero(date.getHours()),
     padZero(date.getMinutes()),
